@@ -7,8 +7,8 @@ class App < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/' do
-    'Hello World!'
+  get '/test' do
+    'Testing infrastructure working!'
   end
 
   # start the server if ruby file executed directly
