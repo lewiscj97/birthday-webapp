@@ -6,8 +6,15 @@ feature 'Testing infrastructure' do
 end
 
 feature 'Home page' do
-  scenario 'Display a greeting' do
+  scenario 'Displays a greeting' do
     visit('/')
     expect(page).to have_content 'Hello there!'
+  end
+
+  scenario 'Asks user for their name' do
+    visit('/')
+    fill_in 'name', with: 'Lewis'
+    click_button 'Go!'
+    expect(page).to have_content 'Success'
   end
 end
