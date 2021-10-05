@@ -11,18 +11,11 @@ feature 'Home page' do
     expect(page).to have_content 'Hello there!'
   end
 
-  scenario 'Asks user for their name' do
-    visit('/')
-    fill_in 'name', with: 'Lewis'
-    click_button 'Go!'
-    expect(page).to have_content 'Success'
-  end
-
   scenario 'Asks user for their name and birthday' do
     visit('/')
     fill_in 'name', with: 'Lewis'
     fill_in 'day', with: 18
-    select "March", :from => "month"
+    select "March", from: "month"
     click_button 'Go!'
     expect(page).to have_content 'Success'
   end
