@@ -33,3 +33,11 @@ feature 'Birthdays' do
     end
   end
 end
+
+feature 'Going again' do
+  scenario 'It lets the user start again' do
+    enter_birthdays_and_result
+    click_button 'Start again!'
+    expect(page).to have_content 'Hello there!'
+  end
+end
