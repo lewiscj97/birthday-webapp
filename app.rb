@@ -16,9 +16,10 @@ class App < Sinatra::Base
   end
 
   post '/details' do
-    @name = params[:name]
-    @day = params[:day]
-    @month = params[:month]
+    name = params[:name]
+    day = params[:day]
+    month = params[:month]
+    Person.new(name, day, month)
     redirect to('/result')
   end
 
