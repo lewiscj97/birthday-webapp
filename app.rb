@@ -23,7 +23,7 @@ class App < Sinatra::Base
   end
 
   get '/result' do
-    
+    'Success'
   end
 
   # start the server if ruby file executed directly
