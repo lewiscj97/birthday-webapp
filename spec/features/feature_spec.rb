@@ -16,3 +16,16 @@ feature 'Home page' do
     expect(page).to have_content 'Success'
   end
 end
+
+feature 'Birthdays' do
+  context 'It is the users birthday' do
+    scenario 'Wishes them happy birthday' do
+      visit('/')
+      fill_in 'name', with: 'Lewis'
+      fill_in 'day', with: 6
+      select "October", from: "month"
+      click_button 'Go!'
+      expect(page).to have_content 'Happy Birthday Lewis!'
+    end
+  end
+end
