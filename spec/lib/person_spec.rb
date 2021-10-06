@@ -29,4 +29,11 @@ describe Person do
       expect(person.birthday_today?).to eq true
     end
   end
+
+  describe "#days_until_birthday" do
+    it 'returns the number of days until the users next birthday' do
+      person = Person.new('Lewis', 18, 'March')
+      expect(person.days_until_birthday).to eq 163
+    end
+  end
 end
