@@ -22,4 +22,11 @@ describe Person do
       expect(@person.month).to eq "March"
     end
   end
+
+  describe "#birthday_today?" do
+    it 'returns true when the birthday is today' do
+      person = Person.new('Lewis', 6, 'October')
+      expect(person.birthday_today?).to eq true
+    end
+  end
 end
