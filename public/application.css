@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+  padding: 20 0 10;
+}
+
+h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+form {
+  text-align: center;
+}
+
+body {
+  background-color: LightSkyBlue;
+}
+
+label {
+  padding: 5;
+}
