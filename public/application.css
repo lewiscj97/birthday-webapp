@@ -14,8 +14,13 @@ form {
 
 body {
   background-color: LightSkyBlue;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 label {
   padding: 5;
+}
+
+input {
+  text-align: center;
 }
