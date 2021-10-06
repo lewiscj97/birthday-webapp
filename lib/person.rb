@@ -12,7 +12,6 @@ class Person
   def birthday_today?
     today = Date.today
     result = today.mon == month_to_integer && today.mday == @day.to_i
-    puts result
   end
 
   private

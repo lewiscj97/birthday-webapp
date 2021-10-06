@@ -1,0 +1,10 @@
+<style>
+  h1 {
+    text-align: center;
+    padding: 20px
+  }
+</style>
+
+<% if @person.birthday_today? %>
+<h1>Happy Birthday <%= @person.name%>!</h1>
+<% end %>

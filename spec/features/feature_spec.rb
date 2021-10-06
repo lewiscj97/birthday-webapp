@@ -13,7 +13,7 @@ feature 'Home page' do
 
   scenario 'Asks user for their name and birthday' do
     enter_birthdays_and_result
-    expect(page).to have_content 'Success'
+    expect(page).to have_current_path '/result'
   end
 end
 

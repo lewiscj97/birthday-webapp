@@ -1,11 +1,14 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require './lib/person'
 
 class App < Sinatra::Base
   
   configure :development do
     register Sinatra::Reloader
   end
+
+  enable :sessions
 
   get '/test' do
     'Testing infrastructure working!'
@@ -19,12 +22,13 @@ class App < Sinatra::Base
     name = params[:name]
     day = params[:day]
     month = params[:month]
-    Person.new(name, day, month)
+    session[:person] = Person.new(name, day, month)
     redirect to('/result')
   end
 
   get '/result' do
-    'Success'
+    @person = session[:person]
+    erb(:result)
   end
 
   # start the server if ruby file executed directly
