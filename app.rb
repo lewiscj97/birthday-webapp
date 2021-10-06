@@ -28,6 +28,9 @@ class App < Sinatra::Base
 
   get '/result' do
     @person = session[:person]
+    @birthday_today = @person.birthday_today?
+    @days_until_birthday = @person.days_until_birthday
+    @name = @person.name
     erb(:result)
   end
 

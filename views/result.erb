@@ -5,6 +5,8 @@
   }
 </style>
 
-<% if @person.birthday_today? %>
-<h1>Happy Birthday <%= @person.name%>!</h1>
+<% if @birthday_today %>
+<h1>Happy Birthday <%= @name%>!</h1>
+<% else%>
+<h1>It is your birthday in <%= @days_until_birthday%> days!</h1>
 <% end %>
