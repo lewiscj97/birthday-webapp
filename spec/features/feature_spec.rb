@@ -25,4 +25,11 @@ feature 'Birthdays' do
       expect(page).to have_content 'Happy Birthday Lewis!'
     end
   end
+
+  context 'It is not the users birthday' do
+    scenario 'Tells them how many days until their birthday' do
+      enter_birthdays_and_result
+      expect(page).to have_content 'It is your birthday in 163 days!'
+    end
+  end
 end
