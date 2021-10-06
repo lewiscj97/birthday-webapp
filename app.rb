@@ -15,8 +15,15 @@ class App < Sinatra::Base
     erb(:index)
   end
 
-  post '/result' do
-    'Success'
+  post '/details' do
+    @name = params[:name]
+    @day = params[:day]
+    @month = params[:month]
+    redirect to('/result')
+  end
+
+  get '/result' do
+    
   end
 
   # start the server if ruby file executed directly
